@@ -1,12 +1,10 @@
-from rich.console import Console
-from rich.traceback import install
 from endecryption import encryption
 from json import loads,dumps
 from random import choice,sample,randint
 from requests import get,post
 install()
 console = Console()
-enc = encryption("fmwyeixiiqinwanryriojvzvpfwydqgr")
+enc = encryption("AUTH")
 
 def req(data:dict) -> dict:
     while True:
@@ -38,7 +36,7 @@ def changeId(id:str) -> None:
             "lang_code": "en"
         }
     }
-    return encrypt(json,"fmwyeixiiqinwanryriojvzvpfwydqgr")
+    return encrypt(json,"AUTH")
     
     
 while True:
@@ -49,7 +47,5 @@ while True:
             generator += choice(vache)
         
         return generator
-    
-    console.log(changeId(generatorIdRandom()),log_locals=False)
     ...   
 ...
